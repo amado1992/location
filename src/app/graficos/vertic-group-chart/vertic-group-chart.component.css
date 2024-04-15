@@ -1,0 +1,14 @@
+.ngx-hrz-norm{
+  margin-left: 5px;
+ }
+ /* .chart-legend {
+  position: absolute
+  top: 0;
+  right: 140px;
+  } */
+ .horizontal-legend {
+   max-width: 160px;
+ }
+ul.legend-labels.horizontal-legend  {
+  max-width: 160px;
+ }

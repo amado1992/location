@@ -1,0 +1,149 @@
+<div class="modal-header">
+  <div class="d-flex flex-row ml-lg-5">
+    
+    <div class="p-2">
+
+      <h4 class="modal-title pull-right">Abrir explorador</h4>
+    </div>
+
+    <div class="d-flex flex-row justify-content-center" *ngIf="!loadingProject" style="margin-top: 10px;">
+      <div>
+        <div class="spinner-border text-success" role="status" *ngIf="!loadingProject">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div *ngIf="!loadingProject" class="p-1">cargando...</div>
+    </div>
+  </div>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal(1)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <div class="container">
+    <!--<div class="row">
+      <div class="cl-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 m-2" style="border: solid 2px #43aa36;
+      border-radius: 5px; overflow-y: auto;">
+        <div class="d-flex flex-row" *ngFor="let pro of projects" style="border-bottom: solid 1px grey;">
+
+          <div class="p-2">
+            <svg style="fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 4c0-1.1.9-2 2-2h7l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
+            </svg>
+          </div>
+          <div class="p-2">{{pro.description}}</div>
+          <div class="p-2">
+            <svg style="width: 75%; fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3 3.7l4 4L4 20H0v-4L12.3 3.7zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z" />
+            </svg>
+          </div>
+        </div>
+        <div class="p-2"><svg style="fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 9V5H9v4H5v2h4v4h2v-4h4V9h-4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 m-2" style="border: solid 2px #43aa36;
+      border-radius: 5px; overflow-y: auto;">
+        <div class="input-group p-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><svg width="20px" height="20px" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M10 14L4 5V3h16v2l-6 9v6l-4 2z" />
+                </g>
+              </svg>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Filtrar" aria-label="Filtrar"
+            aria-describedby="basic-addon1">
+        </div>
+        <div class="d-flex flex-row" *ngFor="let loc of locations" style="border-bottom: solid 1px grey;">
+
+          <div class="p-2"><svg style="fill: #43aa36;
+                      " width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+            </svg>
+          </div>
+          <div class="p-2">{{loc.description}}</div>
+        </div>
+        <div class="p-2"><svg style="fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 9V5H9v4H5v2h4v4h2v-4h4V9h-4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20z" />
+          </svg>
+        </div>
+      </div>
+    </div>-->
+
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #43aa36;
+      border-radius: 5px; overflow-y: auto;">
+        <div class="d-flex flex-row" *ngFor="let pro of projects | paginate: config"
+          style="border-bottom: solid 1px grey;">
+
+          <div class="p-2">
+            <svg style="fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 4c0-1.1.9-2 2-2h7l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
+            </svg>
+          </div>
+          <div class="p-2">{{pro.Nombre}}</div>
+          <div class="p-2" (click)="editProject(pro)" style="cursor: pointer;">
+            <svg style="width: 75%; fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3 3.7l4 4L4 20H0v-4L12.3 3.7zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z" />
+            </svg>
+          </div>
+        </div>
+        <!--<div class="p-2"><svg style="fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 9V5H9v4H5v2h4v4h2v-4h4V9h-4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20z" />
+          </svg>
+        </div>-->
+
+        <div class="p-2">
+          <pagination-controls previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="pageChanged($event)"
+            id="first"></pagination-controls>
+        </div>
+      </div>
+
+      <!--<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 m-2" style="border: solid 2px #43aa36;
+      border-radius: 5px; overflow-y: auto;">
+        <div class="input-group p-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><svg width="20px" height="20px" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M10 14L4 5V3h16v2l-6 9v6l-4 2z" />
+                </g>
+              </svg>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Filtrar" aria-label="Filtrar"
+            aria-describedby="basic-addon1">
+        </div>
+        <div class="d-flex flex-row" *ngFor="let loc of projects" style="border-bottom: solid 1px grey;">
+
+          <div class="p-2"><svg style="fill: #43aa36;
+                      " width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+            </svg>
+          </div>
+          <div class="p-2">{{loc.Descripcion}}</div>
+        </div>
+        <div class="p-2"><svg style="fill: #43aa36;" width="20px" height="20px" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 9V5H9v4H5v2h4v4h2v-4h4V9h-4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20z" />
+          </svg>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>

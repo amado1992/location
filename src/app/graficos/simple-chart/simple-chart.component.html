@@ -1,0 +1,68 @@
+<!--<div class="ngx-hrz-norm" style="margin-left: 14px;">
+  <p style="text-align: center;" class="pb-2">{{ title }}</p>-->
+
+<!--<ngx-charts-bar-vertical style="position: absolute !important;"
+[view]="view"
+[scheme]="colorScheme"
+[results]="single"
+[gradient]="gradient"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[legend]="showLegend"
+[showXAxisLabel]="showXAxisLabel"
+[showYAxisLabel]="showYAxisLabel"
+[showDataLabel]= "showDataLabel"
+[xAxisLabel]="xAxisLabel"
+[yAxisLabel]="yAxisLabel"
+[dataLabelFormatting] = "formatDataLabel"
+(select)="onSelect($event)">
+</ngx-charts-bar-vertical>-->
+
+<!--<ngx-charts-bar-vertical style="position: absolute !important;"
+[view]="view"
+[scheme]="colorScheme"
+[results]="single"
+[gradient]="gradient"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[legend]="showLegend"
+[showXAxisLabel]="showXAxisLabel"
+[showYAxisLabel]="showYAxisLabel"
+[xAxisLabel]="xAxisLabel"
+[yAxisLabel]="yAxisLabel"
+[dataLabelFormatting] = "formatDataLabel"
+(select)="onSelect($event)">
+</ngx-charts-bar-vertical>
+</div>-->
+
+<!--<div class="container">
+  <div>
+    <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient"
+      [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel" [showDataLabel]="showDataLabel" [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel" [dataLabelFormatting]="formatDataLabel" (select)="onSelect($event)">
+    </ngx-charts-bar-vertical>
+  </div>
+</div>-->
+
+<div class="ngx-hrz-norm" >
+  <p>{{ title }}</p>
+<ngx-charts-bar-horizontal style="position: absolute !important;"
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [animations] = "animations"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [showDataLabel]="showDataLabel"
+      [roundEdges] = "roundEdges"
+      [dataLabelFormatting] = "formatDataLabel"
+      (select)="onSelect($event)">
+</ngx-charts-bar-horizontal>
+</div>

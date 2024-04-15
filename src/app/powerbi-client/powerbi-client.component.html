@@ -1,0 +1,46 @@
+<!--<div class="modal-header">
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>-->
+
+<div class="d-flex flex-row-reverse" style="border-bottom: solid 1px #f1f3f5;">
+  <!--<div class="p-2"><img width="30" src="assets/img/iconos/folder.png"></div>-->
+  <div class="p-2">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="p-2" style="cursor: pointer !important;" data-toggle="tooltip" data-placement="top"
+    title="Informe anterior">
+    <svg (click)="hideReport()" style="cursor: pointer !important;" width="30px" height="30px" viewBox="0 0 18 18"
+      xmlns="http://www.w3.org/2000/svg" mirror-in-rtl="true">
+      <path fill="#43aa36"
+        d="M15 0H3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zM6 14.983a1 1 0 1 1-2 0v-2a1 1 0 0 1 2 0v2zM4 5.5A2.5 2.5 0 0 1 6.5 3v2.5H9a2.5 2.5 0 0 1-5 0zm6 9.468a1 1 0 1 1-2 0v-5a1 1 0 0 1 2 0v5zM7.5 4.5V2A2.5 2.5 0 0 1 10 4.5H7.5zM14 15a1 1 0 0 1-2 0V4a1 1 0 0 1 2 0v11z" />
+    </svg>
+  </div>
+
+</div>
+
+<div class="modal-body">
+  <!--<powerbi-report
+  [embedConfig]="reportConfig"
+  [cssClassName]="reportClass"
+  [phasedEmbedding]="phasedEmbeddingFlag"
+>
+</powerbi-report>-->
+
+  <!--<iframe *ngIf="!isHideReport" id="inlineInformePowerBi" title="Informe power bi" width="1080" height="400"
+    src="https://app.powerbi.com/reportEmbed?reportId=921b3a3c-0188-4740-be6b-2d566e3dc7f2&autoAuth=true"
+    allowfullscreen="true">
+  </iframe>-->
+
+  <iframe *ngIf="!isHideReport" _ngcontent-c31="" allowfullscreen="true" height="400" id="inlineInformePowerBi"
+    src="https://app.powerbi.com/reportEmbed?reportId=d5e8b205-b632-47bd-9ede-9a55058f3c07&autoAuth=true"
+    title="Informe power bi" width="1080" class="ng-star-inserted"></iframe>
+
+</div>
+
+<div class="modal-footer">
+  <button (click)="bsModalRef.hide()" type="button" class="btn btn-success">Cerrar</button>
+</div>

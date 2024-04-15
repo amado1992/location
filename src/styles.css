@@ -1,0 +1,139 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+/* You can add global styles to this file, and also import other style files */
+.dataTables_info,.paginate_button  {
+  font-size: 12px !important;
+  ;
+}
+div.mapboxgl-ctrl-group button:disabled {
+  cursor:not-allowed;
+  pointer-events: all !important;
+}
+/* .dataTables_wrapper .dataTables_info {
+  font-size: 13px !important;
+} */
+.border{
+  box-shadow: 1px 1px 3px #666;
+}
+text.textDataLabel{
+  font-weight:bold;
+  color: #666;
+}
+.ngx-hrz-norm p{
+  text-align: center;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+footer{
+  background-color: #001361 !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+footer h1,h6{
+  font-family: "Poppins", sans-serif;
+}
+footer h6 {
+  font-size: 16px;
+  line-height: 22px;
+  line-height: 1.375;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+nav.navbar {
+  position: fixed;
+  z-index: 1020;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  background-color: #ffffff !important;
+
+}
+header{
+  margin-bottom: 5rem;
+}
+/* main{
+  margin-bottom: 5rem;
+} */
+a.nav-link{
+  border: none;
+  color: #2273da !important;
+  font-size: 16px;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+}
+a.active{
+
+  color: #260ada !important;
+
+}
+
+.modal-dialog.modal-xl {
+  max-width: 1500px;
+  max-height: 1000px;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+  }
+}
+
+#footer-widget-area-1 li a i {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  color: #A9AFB1;
+  text-decoration: none;
+
+}
+
+#footer-widget-area-1 li a i:hover{
+  background:#8089B0;
+  color: white;
+  text-decoration: none;
+}
+
+#footer-widget-area-1 li a
+/* #footer-widget-area-1 li a i::before */
+{
+  text-decoration: none;
+}
+#footer-widget-area-1 li a i:hover
+i.fa-phone ,i.fa-map-marker{
+  color: #A9AFB1;
+}
+app-root{
+  background-color: #f9f9f9 ;
+}
+
+#footer_address{
+  color: #A9AFB1;
+  text-decoration: none;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+#footer_address:hover{
+  color: white;
+  text-decoration: none;
+}
+/* .mapboxgl-canvas-container {
+  cursor: url(assets/img/iconos/pointer.png), auto !important
+} */

@@ -1,0 +1,21 @@
+/*.demo-chart-line {
+  height: 500px;
+}*/
+
+
+.chart-legend .legend-labels {
+  line-height: 85%;
+  list-style: none;
+  text-align: left;
+  float: left;
+ /*width: 100%;*/
+  border-radius: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  background: rgba(0,0,0,.05);
+}
+
+svg {
+  display: none;
+}

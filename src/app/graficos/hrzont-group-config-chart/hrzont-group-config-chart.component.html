@@ -1,0 +1,20 @@
+<div class="ngx-hrz-norm">
+    <p  style="text-align: left;">{{ title }}</p>
+    <ngx-charts-bar-horizontal-2d style="position: absolute !important;"
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="multi"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          [roundEdges] = "roundEdges"
+          [showDataLabel]="showDataLabel"
+          [dataLabelFormatting] = "formatDataLabel"
+          (select)="onSelect($event)">
+  </ngx-charts-bar-horizontal-2d>
+    </div>

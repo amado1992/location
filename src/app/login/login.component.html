@@ -1,0 +1,26 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent" style="margin-top: 60px !important;">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
+      <h2>Identifícate</h2>
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second custom-input-class" name="login" placeholder="Usuario"  [(ngModel)] = "usuario.alias">
+        <div><span style="font-size: 13px;color: rgb(148, 17, 17);" *ngIf="visible_usuar">Campo <strong>Usuario</strong> no puede estar vacio</span></div>
+      <input type="password" id="password" class="fadeIn third custom-input-class" name="login" placeholder="Contraseña" [(ngModel)] = "usuario.pass">
+        <div><span style="font-size: 13px;color: rgb(148, 17, 17);" *ngIf="visible_pass">Campo <strong>Contraseña</strong> no puede estar vacio</span></div>
+      <input style="background: #25ad4d; box-shadow: 0 10px 30px 0 white;" type="button" (click)="login()" class="fadeIn fourth" value="Autenticarse">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a (click)="lostPassword()" style="color: black; cursor: pointer;" class="underlineHover">¿Olvidaste la contraseña?</a>
+    </div>
+
+  </div>
+</div>

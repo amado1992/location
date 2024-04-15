@@ -1,0 +1,51 @@
+<div class="modal-header">
+  <div class="d-flex flex-row ml-lg-5">
+    
+    <div class="p-2">
+      <svg fill="#43aa36" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"/></svg>
+    </div>
+    <div class="p-1">
+
+      <h4 class="modal-title pull-right" *ngIf="id == 0">Guardar usuario</h4>
+      <h4 class="modal-title pull-right" *ngIf="id == 1">Editar usuario</h4>
+    </div>
+  </div>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+        <label for="name">Usuario</label>
+        <input class="form-control" id="name" type="text" formControlName="usuario">
+        <small class="text-danger" *ngIf="form.get('usuario').errors?.email">El correo electrónico es inválido.</small>
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+        <div>
+          <label for="name">Password</label>
+        </div>
+        <input class="form-control" type="text" formControlName="password">
+        <small class="text-danger" *ngIf="form.get('password').hasError('minlength')">Su contraseña debe tener al menos 10 caracteres.</small>
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-group">
+        <div>
+          <label for="name">Rol</label>
+          <select class="form-control" name="selectAction" formControlName="rol">
+            <option *ngFor="let op of options" [value]="op.id">
+              {{op.rol}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 form-group">
+        <div><button type="submit" class="btn btn-success" [disabled]="!form.valid">Guardar</button></div>      
+      </div>
+    </div>
+  </form>
+</div>

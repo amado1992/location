@@ -1,0 +1,20 @@
+<div class="ngx-hrz-norm" >
+    <p style="margin-bottom: -70px; margin-top: 33px;">{{ title }}</p>
+      <ngx-charts-pie-chart style="position: absolute !important;"
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="single"
+        [legend]="showLegend"
+        [explodeSlices]="explodeSlices"
+        [labels]="showLabels"
+        [doughnut]="doughnut"
+        [gradient]="gradient"
+        [labels]="labels"
+        [labelFormatting]="setLabelFormatting"
+        (select)="onSelect($event)">
+        <ng-template #labelTemplate let-model="model">
+          <h6 style="color: #fff">{{model.series}} - {{model.name}}</h6>
+          <h6 style="color: #fff">It's around {{model.value | number:'1.1-2'}}%</h6>
+      </ng-template>
+      </ngx-charts-pie-chart>
+  </div>

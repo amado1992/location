@@ -1,0 +1,14 @@
+<div class="ngx-hrz-norm" >
+    <p style="margin-bottom: -70px; margin-top: 5px; max-height: 30px;">{{ title }}</p>
+      <ngx-charts-pie-chart style="position: absolute !important;"
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="single"
+        [legend]="showLegend"
+        [explodeSlices]="explodeSlices"
+        [labels]="showLabels"
+        [doughnut]="doughnut"
+        [gradient]="gradient"
+        (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+  </div>
